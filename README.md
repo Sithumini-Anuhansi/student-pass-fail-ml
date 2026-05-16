@@ -2,125 +2,244 @@
 
 ## 📌 Project Overview
 
-This project is a machine learning-based classification system designed to predict whether a student will **Pass or Fail** based on academic performance indicators such as attendance, internal test scores, assignment marks, and daily study hours.
+This project applies Machine Learning techniques to predict whether a student will **Pass** or **Fail** based on academic performance indicators such as:
 
-The goal is to demonstrate how data-driven approaches can be used in education to identify at-risk students and support early intervention strategies.
+* Attendance Percentage
+* Internal Test Scores
+* Assignment Marks
+* Daily Study Hours
 
----
-
-## 📊 Dataset Information
-
-The dataset contains student academic records with the following features:
-
-- Student ID
-- Attendance (%)
-- Internal Test 1 (out of 40)
-- Internal Test 2 (out of 40)
-- Assignment Score (out of 10)
-- Daily Study Hours
-- Final Exam Marks (out of 100)
+The project was developed as part of an ML task to demonstrate the complete machine learning workflow including preprocessing, model training, evaluation, visualization, cross-validation, and hyperparameter tuning.
 
 ---
 
-## ⚙️ Workflow / Pipeline
+## 🎯 Objectives
 
-The project follows a complete ML pipeline:
-
-1. Import Libraries
-2. Load Dataset
-3. Check Missing Values
-4. Data Preprocessing
-5. Create Target Variable (Pass/Fail)
-6. Feature Selection
-7. Feature Scaling (Standardization)
-8. Train-Test Split (80/20)
-9. Model Training
-10. Model Evaluation
-11. Visualization
-12. Feature Importance Analysis
-13. Prediction Function
-14. Best Model Selection
+* Build a supervised machine learning classification system
+* Compare multiple ML algorithms
+* Evaluate model performance using different techniques
+* Select the best performing model
+* Visualize prediction results
+* Improve performance using tuning techniques
 
 ---
 
 ## 🤖 Machine Learning Models Used
 
-The following classification algorithms were implemented:
+The following classification algorithms were implemented and compared:
 
-- Logistic Regression
-- Decision Tree Classifier
-- K-Nearest Neighbors (KNN)
-- Random Forest Classifier
+1. Logistic Regression
+2. Decision Tree
+3. K-Nearest Neighbors (KNN)
+4. Random Forest
 
----
+Different models were used to compare various learning approaches:
 
-## 📈 Model Evaluation Metrics
-
-Each model was evaluated using:
-
-- Accuracy Score
-- Confusion Matrix
-- Classification Report (Precision, Recall, F1-score)
-- Actual vs Predicted Visualization
+* Linear learning
+* Rule-based learning
+* Distance-based learning
+* Ensemble learning
 
 ---
 
-## 🏆 Best Performing Model
+## ⚙️ Technologies & Libraries
 
-The best performing model was selected based on accuracy comparison across all models.
+### Languages
 
-> ✔ Best Model: Logistic Regression (or update if yours differs)  
-> ✔ Reason: Highest accuracy with balanced performance
+* Python
 
----
+### Libraries
 
-## 📊 Visualizations Included
-
-- Model Accuracy Comparison Bar Chart
-- Confusion Matrix for all models
-- Actual vs Predicted Graph
-- Feature Importance (Decision Tree & Random Forest)
-- Logistic Regression Coefficient Analysis
+* pandas
+* numpy
+* matplotlib
+* seaborn
+* scikit-learn
+* Google Colab
 
 ---
 
-## 🔍 Feature Importance Insights
+## 📂 Project Structure
 
-Feature analysis revealed that:
-
-- Attendance (%) is the most influential factor
-- Internal test scores strongly affect final performance
-- Study hours significantly contribute to prediction accuracy
-- Assignments also play a moderate role in performance prediction
+```bash id="1kq2pi"
+student-pass-fail-ml/
+│
+├── data/
+│   └── Final_Marks_Data.csv
+│
+├── notebooks/
+│   └── ML_Task.ipynb
+│
+├── images/
+│   ├── model-accuracy-comparison.png
+│   ├── confusion-matrix-logistic-regression.png
+│   ├── confusion-matrix-decision-tree.png
+│   ├── confusion-matrix-knn.png
+│   ├── actual-vs-predicted.png
+│   └── feature-importance-decision-tree.png
+│
+├── README.md
+└── report.pdf
+```
 
 ---
 
-## 🧠 Key Functional Feature
+## 🔄 Machine Learning Workflow
 
-A unified prediction function was implemented to compare outputs from all models:
+### 1️⃣ Import Libraries
 
-- Logistic Regression prediction
-- Decision Tree prediction
-- KNN prediction
-- Random Forest prediction
+Imported required libraries for:
 
-This allows real-time comparison of model decisions.
+* Data processing
+* Visualization
+* Model building
+* Evaluation
+
+### 2️⃣ Upload Dataset
+
+Dataset uploaded dynamically using Google Colab.
+
+### 3️⃣ Data Overview
+
+Performed:
+
+* Dataset inspection
+* Data type checking
+* Missing value checking
+
+### 4️⃣ Create Target Variable
+
+Created binary classification target:
+
+* Pass = 1
+* Fail = 0
+
+### 5️⃣ Feature Selection
+
+Selected relevant academic performance features.
+
+### 6️⃣ Feature Scaling
+
+Used `StandardScaler()` to normalize feature values.
+
+### 7️⃣ Train-Test Split
+
+Dataset divided into:
+
+* 70% Training Data
+* 30% Testing Data
+
+### 8️⃣ Model Training
+
+Trained all four machine learning models.
+
+### 9️⃣ Model Evaluation
+
+Evaluated using:
+
+* Accuracy Score
+* Confusion Matrix
+* Classification Report
+* Actual vs Predicted Graphs
+
+### 🔟 Cross Validation
+
+Applied 5-Fold Cross Validation to verify model stability.
+
+### 1️⃣1️⃣ Hyperparameter Tuning
+
+Used `GridSearchCV` to optimize model parameters and improve performance.
+
+### 1️⃣2️⃣ Feature Importance
+
+Analyzed the influence of features on predictions.
+
+### 1️⃣3️⃣ Best Model Selection
+
+Compared:
+
+* Original Accuracy
+* Cross Validation Score
+* Tuned Accuracy
+
+Selected the best overall model based on combined performance.
 
 ---
 
-## 📌 Technologies Used
+## 📊 Final Model Performance
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-learn
+| Model               | Original Accuracy | CV Mean Score | Tuned Accuracy |
+| ------------------- | ----------------- | ------------- | -------------- |
+| Logistic Regression | ~0.95             | ~0.95         | ~0.95          |
+| Decision Tree       | ~0.91             | ~0.91         | ~0.94          |
+| KNN                 | ~0.93             | ~0.94         | ~0.94          |
+| Random Forest       | ~0.94             | ~0.94         | ~0.95          |
+
+---
+
+## 🏆 Best Model
+
+### ✅ Logistic Regression
+
+Selected because it showed:
+
+* Highest overall accuracy
+* Strong cross-validation performance
+* Better stability and generalization ability
+
+---
+
+## 📈 Visualizations Included
+
+* Accuracy Comparison Chart
+* Confusion Matrices
+* Actual vs Predicted Results
+* Feature Importance Graphs
+
+---
+
+## 📌 Key Findings
+
+* Attendance and Internal Test Scores were the strongest predictors of student success.
+* Cross-validation improved confidence in model reliability.
+* Hyperparameter tuning improved model performance and optimization.
 
 ---
 
 ## 🚀 How to Run the Project
 
-1. Clone the repository
-```bash
-git clone https://github.com/your-username/student-pass-fail-ml.git
+### Clone Repository
+
+```bash id="j12bux"
+git clone https://github.com/Sithumini-Anuhansi/student-pass-fail-ml.git
+```
+
+### Open Project
+
+```bash id="uvfskm"
+cd student-pass-fail-ml
+```
+
+### Run Notebook
+
+Open:
+
+```bash id="z7mlgv"
+notebooks/ML_Task.ipynb
+```
+
+Run all cells in Google Colab or Jupyter Notebook.
+
+---
+
+## 📌 Conclusion
+
+This project successfully demonstrates the practical application of machine learning for predicting student academic outcomes. By comparing multiple models, applying cross-validation, and performing hyperparameter tuning, a reliable and accurate prediction system was developed.
+
+---
+
+## 👩‍💻 Author
+
+### Sithumini Anuhansi
+
+Software Engineering Undergraduate – NIBM Sri Lanka
