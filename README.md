@@ -238,6 +238,11 @@ This project successfully demonstrates the practical application of machine lear
 
 ---
 
+<div align="right">
+<img src="https://visitor-badge.laobi.icu/badge?page_id=Sithumini-Anuhansi.student-pass-fail-ml&left_text=Views"/>
+</div>
+---
+
 ## 👩‍💻 Author
 
 ### Sithumini Anuhansi
