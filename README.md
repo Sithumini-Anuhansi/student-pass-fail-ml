@@ -1,5 +1,7 @@
 # 🎓 Student Pass/Fail Prediction using Machine Learning
 
+![Logo](images/1-student-pass-fail.png)
+
 ## 📌 Project Overview
 
 This project applies Machine Learning techniques to predict whether a student will **Pass** or **Fail** based on academic performance indicators such as:
