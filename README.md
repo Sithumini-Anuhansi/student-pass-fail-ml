@@ -28,6 +28,8 @@ The project was developed as part of an ML task to demonstrate the complete mach
 
 ## 🤖 Machine Learning Models Used
 
+![Models](images/2-models.png)
+
 The following classification algorithms were implemented and compared:
 
 1. Logistic Regression
